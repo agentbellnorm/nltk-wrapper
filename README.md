@@ -21,7 +21,7 @@ for sentence in document:
     print(word.pos_tag)
     print(word.weight)
 ```
-It easily compiles a summary containing sentiment of the body of the text that is outputted as a textfile `breakdown.txt`
+It easily compiles a summary containing sentiment information about the body of the text that is outputted as a textfile `breakdown.txt`
 ```python
 document.breakdown()
 ```
