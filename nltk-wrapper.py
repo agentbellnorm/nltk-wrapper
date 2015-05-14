@@ -123,24 +123,24 @@ class Doc():
 
 	# Descriptopn: Produces a textfile that outputs a breakdown of the document
 	def breakdown(self):
-		f = open("./breakdown.txt", 'w')
+		f = open("./breakdown.txt", 'w', encoding="utf-8")
 		for sentence in self.sentences:
 			f.write("Sentence text: "+sentence.original+"\n")
 			f.write("Sentence weight: "+str(sentence.sentiment)+"\n")
 			f.write("Sentence breakdown: "+"\n")
 			for word in sentence.words:
-				f.write("\t"+word.stemmed + " " +str(word.weight)+"\n")
+				f.write("\t"+str(word.weight)+"\t"+word.stemmed + "\n")
 		f.write("Number of positive words: " + str(self.numPosWords)+"\n")
 		f.write("Number of negative words: " + str(self.numNegWords)+"\n")
 		f.write("Discrete score: "+str(self.sentiment)+"\n")
 		f.write("Lengt normalized: "+str(self.prop)+"\n")
 
+good_path = "./samplenews/good_news.txt"
+bad_path = "./samplenews/bad_news.txt"
 
-
-with open("./testnews/news1_bad.txt", encoding="utf-8", errors="ignore") as f:
-	bad = Doc(f.read())
-	print(bad.prop)
-	bad.breakdown()
+with open(bad_path, encoding="utf-8", errors="ignore") as f:
+	document = Doc(f.read())
+	document.breakdown()
 
 
 
