@@ -6,7 +6,7 @@ By structuring text into documents, sentences and words. Handling of text become
 document = Doc(body_string)
 ```
 
-and easily compiles a breakdown of the body of the text
+and easily compiles a breakdown of the body of the text that is outputted as a textfile `breakdown.txt`
 ```
 document.breakdown()
 ```
