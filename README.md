@@ -5,8 +5,21 @@ By structuring text into documents, sentences and words. Handling of text become
 ```
 document = Doc(body_string)
 ```
+Information about words and sentences and documents can be accessed through
+```
+print(document.sentiment)
 
-and easily compiles a summary containing sentiment of the body of the text that is outputted as a textfile `breakdown.txt`
+for sentence in document:
+  print(sentence.numberofwords)
+  print(sentence.numPosWords)
+  print(sentence.numNegWords)
+  
+  for word in sentence:
+    print(word.stemmed)
+    print(word.pos_tag)
+    print(word.weight)
+```
+It easily compiles a summary containing sentiment of the body of the text that is outputted as a textfile `breakdown.txt`
 ```
 document.breakdown()
 ```
