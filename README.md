@@ -6,13 +6,11 @@ By structuring text into documents, sentences and words. Handling of text become
 document = Doc(body_string)
 ```
 
-and easily compiles a breakdown of the body of the text that is outputted as a textfile `breakdown.txt`
+and easily compiles a summary containing sentiment of the body of the text that is outputted as a textfile `breakdown.txt`
 ```
 document.breakdown()
 ```
 
-The wrapper is also able to perform trivial sentiment analysis by counting the number of positive and negative words.
-
-Based on NLTK and dictionaries from the Harvard Inquirer.
+The wrapper performs trivial sentiment analysis by counting the number of positive and negative words from the Harvard Inquirer.
 
 Requires Python 3 and the Natural Language ToolKit.
