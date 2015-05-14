@@ -5,9 +5,11 @@ By structuring text into documents, sentences and words. Handling of text become
 ```python
 document = Doc(raw_document_string)
 ```
-Information about words and sentences and documents can be accessed through
+Information about words, sentences and documents can be accessed through
 ```python
 print(document.sentiment)
+print(document.numberOfSentences)
+print(document.numWords)
 
 for sentence in document:
   print(sentence.numberofwords)
